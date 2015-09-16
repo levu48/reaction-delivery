@@ -1,0 +1,14 @@
+<template name="delivery">
+<div class="row">
+  <h2>Delivery <small data-18n="app.settings">Settings</small></h2>
+</div>
+<div class="row">
+  <div class="col-md-6 well">
+     {{#autoForm collection="ReactionCore.Collections.Packages" schema="ReactionCore.Schemas.DeliveryPackageConfig" doc=packageData type="update" id="delivery-update-form"}}
+      {{>afQuickField name='settings.public.key_id'}}
+      {{>afQuickField name='settings.key_secret'}}
+      <button type="submit" class="btn btn-primary pull-right">Update</button>
+    {{/autoForm}}
+  </div>
+</div>
+</template>
